@@ -1,4 +1,4 @@
-package com.ulbra.pokemon;
+package com.ulbra.todolist;
 
 import org.junit.Test;
 

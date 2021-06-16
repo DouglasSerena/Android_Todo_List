@@ -1,4 +1,4 @@
-package com.ulbra.pokemon;
+package com.ulbra.todolist;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.ulbra.pokemon", appContext.getPackageName());
+        assertEquals("com.ulbra.todolist", appContext.getPackageName());
     }
 }

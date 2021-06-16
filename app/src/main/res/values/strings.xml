@@ -1,5 +1,3 @@
 <resources>
-    <string name="app_name">pokemon</string>
-    <string name="text_title">Titulo</string>
-    <string name="text_description">Descrição</string>
+    <string name="app_name">todolist</string>
 </resources>

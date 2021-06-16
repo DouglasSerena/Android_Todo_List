@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.ulbra.pokemon"
+        applicationId "com.ulbra.todolist"
         minSdkVersion 27
         targetSdkVersion 30
         versionCode 1
