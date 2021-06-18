@@ -1,28 +1,25 @@
 package com.ulbra.todolist;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.ulbra.todolist.R;
 import com.ulbra.todolist.adapter.TaskAdapter;
-import com.ulbra.todolist.models.Task;
+import com.ulbra.todolist.parcelable.Task;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
-    ArrayList<Task> tasks = new ArrayList<Task>();
+    ArrayList<Task> tasks;
 
     FloatingActionButton btnAddTask;
     RecyclerView recyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,20 +32,46 @@ public class MainActivity extends AppCompatActivity {
 
         btnAddTask.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), AddTaskActivity.class);
+            intent.putParcelableArrayListExtra("tasks", tasks);
             startActivity(intent);
         });
 
-        tasks.add(new Task("Manha", "preciso comer e tomar cafe", "2021-06-18", true));
-        tasks.add(new Task("Manha", "preciso comer e tomar cafe", "2021-06-18", true));
-        tasks.add(new Task("Manha", "preciso comer e tomar cafe", "2021-06-18", true));
-        tasks.add(new Task("Manha", "preciso comer e tomar cafe", "2021-06-18", true));
+        getTasks();
+        addNewTask();
+
+        tasks.add(new Task("dawdaw", "dawdawdawdawdawdaw daw daw daw d", "213213123"));
+        tasks.add(new Task("dawdaw", "dawdawdawdawdawdaw daw daw daw d", "213213123"));
+        tasks.add(new Task("dawdaw", "dawdawdawdawdawdaw daw daw daw d", "213213123"));
+        tasks.add(new Task("dawdaw", "dawdawdawdawdawdaw daw daw daw d", "213213123"));
+        tasks.add(new Task("dawdaw", "dawdawdawdawdawdaw daw daw daw d", "213213123"));
 
         createRecycler();
     }
 
     public void createRecycler() {
-        TaskAdapter taskAdapter = new TaskAdapter(getApplicationContext(), tasks);
+        TaskAdapter taskAdapter = new TaskAdapter(getApplicationContext(), tasks, this::remove);
         recyclerView.setAdapter(taskAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+    }
+
+    void remove(int position) {
+        tasks.remove(position);
+        this.createRecycler();
+    }
+
+    public void getTasks() {
+        ArrayList<Task> tasks = getIntent().getParcelableArrayListExtra("tasks");
+        if(tasks != null) {
+            this.tasks = tasks;
+        } else {
+            this.tasks = new ArrayList<>();
+        }
+    }
+
+    public void addNewTask() {
+        Task task = getIntent().getParcelableExtra("newTask");
+        if (task != null) {
+            tasks.add(task);
+        }
     }
 }

@@ -20,7 +20,7 @@
 
     <!--  MENSAGEMS DE ERROR  -->
     <string name="error_required">Campo obrigatorio.</string>
-    <string name="error_max_length">O Campo deve ter no maximo de {{length}}</string>
+    <string name="error_max_length">O Campo deve ter no maximo de {{maxlength}}</string>
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

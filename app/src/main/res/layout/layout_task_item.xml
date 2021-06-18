@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
+    app:barrierMargin="10dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -51,17 +51,17 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginBottom="8dp"
                 android:text="TextView"
                 android:textSize="12sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.022"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textDescription"
-                app:layout_constraintVertical_bias="0.938" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
                 android:id="@+id/btnDelete"
