@@ -2,6 +2,26 @@
     <string name="app_name">todolist</string>
     <string name="text_tasks">Tarefas</string>
     <string name="title_activity_add_task">Add_task</string>
+
+    <!--  INPUTS LABEL  -->
+    <string name="label_edit_text_title">Titulo</string>
+    <string name="label_edit_text_description">Descrição</string>
+    <string name="label_edit_text_date">Data</string>
+    <string name="label_checkbox_priority">Pioritario</string>
+
+    <!--  INPUTS DICA  -->
+    <string name="edit_text_hint_title">Informe o titulo</string>
+    <string name="edit_text_hint_description">Informe a descrição</string>
+    <string name="edit_text_hint_date">Informe a data da tarefa</string>
+
+    <!-- BOTÔES -->
+    <string name="btn_add">Adicionar</string>
+    <string name="btn_back">Voltar</string>
+
+    <!--  MENSAGEMS DE ERROR  -->
+    <string name="error_required">Campo obrigatorio.</string>
+    <string name="error_max_length">O Campo deve ter no maximo de {{length}}</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
