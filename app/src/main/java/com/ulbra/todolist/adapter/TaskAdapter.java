@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -50,7 +51,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
 
     public class TaskViewHolder extends RecyclerView.ViewHolder {
         TextView textTitle,textDescription, textDate;
-        Button btnDelete;
+        ImageButton btnDelete;
 
         public TaskViewHolder(@NonNull View itemView) {
             super(itemView);
