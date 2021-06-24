@@ -1,11 +1,13 @@
 package com.ulbra.todolist.adapter;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,6 +43,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         holder.textTitle.setText(tasks.get(position).getTitle());
         holder.textDescription.setText(tasks.get(position).getDescription());
         holder.textDate.setText(tasks.get(position).getDate());
+        if(tasks.get(position).isPriority()) {
+            holder.textRequired.setVisibility(View.VISIBLE);
+        }
         holder.btnDelete.setOnClickListener(v -> handleRemove.onRemove(position));
     }
 
@@ -52,12 +57,14 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     public class TaskViewHolder extends RecyclerView.ViewHolder {
         TextView textTitle,textDescription, textDate;
         ImageButton btnDelete;
+        TextView textRequired;
 
         public TaskViewHolder(@NonNull View itemView) {
             super(itemView);
             textTitle = itemView.findViewById(R.id.textTitle);
             textDescription = itemView.findViewById(R.id.textDescription);
             textDate = itemView.findViewById(R.id.textDate);
+            textRequired = itemView.findViewById(R.id.textRequired);
 
             btnDelete = itemView.findViewById(R.id.btnDelete);
         }

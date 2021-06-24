@@ -38,13 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
         getTasks();
         addNewTask();
-
-        tasks.add(new Task("dawdaw", "dawdawdawdawdawdaw daw daw daw d", "213213123"));
-        tasks.add(new Task("dawdaw", "dawdawdawdawdawdaw daw daw daw d", "213213123"));
-        tasks.add(new Task("dawdaw", "dawdawdawdawdawdaw daw daw daw d", "213213123"));
-        tasks.add(new Task("dawdaw", "dawdawdawdawdawdaw daw daw daw d", "213213123"));
-        tasks.add(new Task("dawdaw", "dawdawdawdawdawdaw daw daw daw d", "213213123"));
-
         createRecycler();
     }
 

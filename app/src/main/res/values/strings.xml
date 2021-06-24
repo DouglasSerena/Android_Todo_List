@@ -2,6 +2,7 @@
     <string name="app_name">todolist</string>
     <string name="text_tasks">Tarefas</string>
     <string name="title_activity_add_task">Add_task</string>
+    <string name="text_required">Prioritaria</string>
 
     <!--  INPUTS LABEL  -->
     <string name="label_edit_text_title">Titulo</string>
